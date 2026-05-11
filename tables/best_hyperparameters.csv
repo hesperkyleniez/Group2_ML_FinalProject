@@ -1,0 +1,6 @@
+,C,solver,var_smoothing,metric,n_neighbors,weights,class_weight,max_depth,max_features,min_samples_leaf,min_samples_split,n_estimators,gamma,kernel
+Logistic Regression,0.1,lbfgs,,,,,,,,,,,,
+Naive Bayes,,,0.11288378916846892,,,,,,,,,,,
+KNN,,,,manhattan,15,uniform,,,,,,,,
+Random Forest,,,,,,,balanced,15,sqrt,2,20,300,,
+SVM,10,,,,,,,,,,,,0.01,rbf
