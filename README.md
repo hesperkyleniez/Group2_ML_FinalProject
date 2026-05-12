@@ -2,7 +2,7 @@
 
 > Logistic Regression · Naive Bayes · K-Nearest Neighbors · Random Forest · Support Vector Machine
 
-A machine learning study that trains, tunes, and compares five classifiers on the **UCI Drug Consumption dataset** to predict whether an individual is a cannabis user or non-user. The project covers the full ML workflow — from preprocessing and hyperparameter tuning to SHAP-based interpretability and cross-model evaluation.
+A machine learning study that trains, tunes, and compares five classifiers on the **UCI Drug Consumption dataset** to predict whether an individual is a cannabis user or non-user. The project covers the full ML workflow from preprocessing and hyperparameter tuning to SHAP-based interpretability and cross-model evaluation.
 
 ---
 
