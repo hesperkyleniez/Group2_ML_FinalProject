@@ -25,7 +25,7 @@ A machine learning study that trains, tunes, and compares five classifiers on th
 
 **Source:** [UCI Drug Consumption (Quantified) — ID 373](https://archive.ics.uci.edu/dataset/373/drug+consumption+quantified)  
 **Features:** Demographic and psychological variables (e.g., age, education, NEO-FFI personality scores, impulsivity, sensation-seeking)  
-**Original Target:** 7-class cannabis use frequency (Never Used → Last Day)  
+**Original Target:** 7-class cannabis use frequency (Never Used - Last Day)  
 **Binarized Target:**
 - `0` — Non-User: Never used (`CL0`) or used over a decade ago (`CL1`)
 - `1` — User: Used within the last decade through last day (`CL2`–`CL6`)
