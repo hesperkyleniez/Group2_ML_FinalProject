@@ -2,7 +2,7 @@
 
 > Logistic Regression · Naive Bayes · K-Nearest Neighbors · Random Forest · Support Vector Machine
 
-A machine learning study that trains, tunes, and compares five classifiers on the **UCI Drug Consumption dataset** to predict whether an individual is a cannabis user or non-user. The project covers the full ML workflow — from preprocessing and hyperparameter tuning to SHAP-based interpretability and cross-model evaluation.
+A machine learning study that trains, tunes, and compares five classifiers on the **UCI Drug Consumption dataset** to predict whether an individual is a cannabis user or non-user. The project covers the full ML workflow from preprocessing and hyperparameter tuning to SHAP-based interpretability and cross-model evaluation.
 
 ---
 
@@ -25,18 +25,18 @@ A machine learning study that trains, tunes, and compares five classifiers on th
 
 **Source:** [UCI Drug Consumption (Quantified) — ID 373](https://archive.ics.uci.edu/dataset/373/drug+consumption+quantified)  
 **Features:** Demographic and psychological variables (e.g., age, education, NEO-FFI personality scores, impulsivity, sensation-seeking)  
-**Original Target:** 7-class cannabis use frequency (Never Used → Last Day)  
+**Original Target:** 7-class cannabis use frequency (Never Used-Last Day)  
 **Binarized Target:**
 - `0` — Non-User: Never used (`CL0`) or used over a decade ago (`CL1`)
 - `1` — User: Used within the last decade through last day (`CL2`–`CL6`)
 
-> **Class Imbalance Note:** The natural class imbalance is deliberately preserved — no oversampling (e.g., SMOTE) was applied. Weighted F1 is used as the primary scoring metric during cross-validation to reduce majority-class bias.
+> **Class Imbalance Note:** The natural class imbalance is deliberately preserved, no oversampling (e.g., SMOTE) was applied. Weighted F1 is used as the primary scoring metric during cross-validation to reduce majority-class bias.
 
 ---
 
 ## Problem Framing
 
-This is a **binary classification** task. The goal is to identify whether a respondent is a current cannabis user based on their personality profile and demographics. The study also investigates *which features* drive each model's predictions through SHAP interpretability analysis.
+This is a **binary classification** task. The goal is to identify whether a respondent is a current cannabis user based on their personality profile and demographics. The study also investigates which features drive each model's predictions through SHAP interpretability analysis.
 
 ---
 
@@ -66,7 +66,7 @@ This is a **binary classification** task. The goal is to identify whether a resp
 │   ├── standard_scaler.pkl
 │   └── svm.pkl
 ├── notebook/
-│   └── Comparative_Analysis_of_Machine_Learning_Models_for_Cannabis_Use_Risk_Classification_...ipynb
+│   └── Comparative_Analysis_of_Machine_Learning_Models...ipynb
 ├── tables/
 │   ├── best_hyperparameters.csv
 │   ├── cross_model_feature_importance.csv
@@ -86,7 +86,7 @@ The notebook follows a structured, reproducible ML pipeline:
 | 1 | Install and import libraries |
 | 2 | Load dataset from UCI repository (`ucimlrepo`) |
 | 3 | Prepare binary cannabis target variable |
-| 4 | Visualize class distribution (7-class → binary) |
+| 4 | Visualize class distribution (7-class - binary) |
 | 5 | Train-test split (80/20, stratified) + StandardScaler |
 | 6 | Hyperparameter tuning via `GridSearchCV` with 5-Fold Stratified CV |
 | 7 | Final evaluation on held-out test set |
@@ -232,4 +232,4 @@ pip install pandas numpy scikit-learn matplotlib seaborn shap joblib ucimlrepo
 
 - **Reproducibility:** `random_state=42` is set across all stochastic components. The dataset is fetched live from the UCI repository via `ucimlrepo` — an internet connection is required on first run.
 
-- **Feature scaling:** `StandardScaler` is fit on the training set only and applied to both train and test sets. The fitted scaler is saved alongside the models — it must be used when loading any saved model for inference.
+- **Feature scaling:** `StandardScaler` is fit on the training set only and applied to both train and test sets. The fitted scaler is saved alongside the models, it must be used when loading any saved model for inference.
