@@ -30,7 +30,7 @@ A machine learning study that trains, tunes, and compares five classifiers on th
 - `0` — Non-User: Never used (`CL0`) or used over a decade ago (`CL1`)
 - `1` — User: Used within the last decade through last day (`CL2`–`CL6`)
 
-> **Class Imbalance Note:** The natural class imbalance is deliberately preserved — no oversampling (e.g., SMOTE) was applied. Weighted F1 is used as the primary scoring metric during cross-validation to reduce majority-class bias.
+> **Class Imbalance Note:** The natural class imbalance is deliberately preserved, no oversampling (e.g., SMOTE) was applied. Weighted F1 is used as the primary scoring metric during cross-validation to reduce majority-class bias.
 
 ---
 
