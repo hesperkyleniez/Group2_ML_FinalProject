@@ -1,7 +1,5 @@
 # Cannabis Use Risk Classification Using a Stacking Ensemble of Support Vector Machine, Random Forest, and Logistic Regression
 
-> Logistic Regression · Random Forest · Support Vector Machine · Proposed Stacking Ensemble
-
 A machine learning study that trains, tunes, and evaluates three baseline classifiers and a proposed stacking ensemble on the **UCI Drug Consumption dataset** to predict whether an individual is a cannabis user or non-user. The project covers the full ML workflow from preprocessing and hyperparameter tuning to SHAP-based interpretability and cross-model evaluation.
 
 ---
