@@ -1,0 +1,5 @@
+Model,User Recall,User Precision,User F1,False Negatives,Non-User Recall
+LR,0.8656,0.8391,0.8521,34,0.6613
+RF,0.8063,0.8755,0.8395,49,0.7661
+SVM,0.8775,0.8377,0.8571,31,0.6532
+Standard Stack,0.9249,0.8387,0.8797,19,0.6371
