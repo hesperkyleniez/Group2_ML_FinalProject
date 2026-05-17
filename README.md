@@ -28,7 +28,7 @@ A machine learning study that trains, tunes, and evaluates three baseline classi
 - `0` — Non-User: Never used (`CL0`) or used over a decade ago (`CL1`)
 - `1` — User: Used within the last decade through last day (`CL2`–`CL6`)
 
-> **Class Imbalance Note:** The natural class imbalance (~67% users, ~33% non-users) is deliberately preserved — no oversampling (e.g., SMOTE) was applied. Weighted F1 is used as the primary scoring metric during cross-validation to reduce majority-class bias.
+> **Class Imbalance Note:** The natural class imbalance (~67% users, ~33% non-users) is deliberately preserved, no oversampling (e.g., SMOTE) was applied. Weighted F1 is used as the primary scoring metric during cross-validation to reduce majority-class bias.
 
 ---
 
@@ -83,7 +83,7 @@ This is a **binary classification** task. The study investigates how three basel
 | 1 | Install and import libraries |
 | 2 | Load dataset from UCI repository (`ucimlrepo`) |
 | 3 | Prepare binary cannabis target variable |
-| 4 | Visualize class distribution (7-class → binary) |
+| 4 | Visualize class distribution (7-class - binary) |
 | 5 | Train-test split (80/20, stratified) + StandardScaler + feature correlation analysis |
 | 6 | Hyperparameter tuning via `GridSearchCV` with 5-Fold Stratified CV |
 | 7 | Final evaluation of baseline models on held-out test set |
@@ -216,7 +216,7 @@ pip install pandas numpy scikit-learn matplotlib seaborn shap joblib ucimlrepo
 
 - **SHAP compute time:** SHAP values for SVM and the stacking ensemble use `KernelExplainer`, which is model-agnostic but computationally slow. These steps may take several minutes. The explainer uses a background sample of 100 training points and evaluates on 50 test samples.
 
-- **Reproducibility:** `random_state=42` is set across all stochastic components. The dataset is fetched live from the UCI repository via `ucimlrepo` — an internet connection is required on first run.
+- **Reproducibility:** `random_state=42` is set across all stochastic components. The dataset is fetched live from the UCI repository via `ucimlrepo`, an internet connection is required on first run.
 
 - **Feature scaling:** `StandardScaler` is fit on the training set only and applied to both train and test sets. The fitted scaler must be used alongside any saved model for inference.
 
